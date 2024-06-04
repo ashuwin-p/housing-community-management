@@ -1,0 +1,74 @@
+{% extends "admin_panel.html" %}
+
+{% block content %}
+<style>
+    body {
+        font-family: Verdana, sans-serif;
+    }
+
+    h2 {
+        background-color: #088f8f;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        /* Center align the heading */
+    }
+
+    table {
+        width: 80%;
+        /* Reduced width of the table */
+        border-collapse: collapse;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    th,
+    td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    th {
+        background-color: #FF5F1F;
+        /* Vibrant color for heading background */
+        color: white;
+        text-align: center;
+        /* Center align the table headers */
+    }
+
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+        /* Alternate color for even rows */
+    }
+
+    tr:hover {
+        background-color: #ddd;
+        border: 2px solid #000;
+        /* Hovering effect */
+    }
+</style>
+
+<h2>Occupied Flats</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Block</th>
+            <th>Flat No</th>
+            <th>Name</th>
+            <th>Phone</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for flat in unoccupied_flats %}
+        <tr>
+            <td>{{ flat[0] }}</td>
+            <td>{{ flat[1] }}</td>
+            <td>{{ flat[2] }}</td>
+            <td>{{ flat[3] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

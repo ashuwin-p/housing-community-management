@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Client Sign In</title>
+  <link rel="stylesheet" href="{{ url_for ('static', filename = 'cl.css')}}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Open+Sans:wght@300&family=Roboto+Slab&family=Space+Grotesk:wght@500&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <h2>Client Sign In</h2>
+  <form action="/cl.html" method="post">
+    <label for="email">Email ID:</label><br />
+    <input type="email" id="email" name="email" required /><br /><br />
+    <label for="password">Password:</label><br />
+    <input type="password" id="password" name="password" required /><br /><br />
+
+    <input type="submit" value="Sign In" />
+    <a href="cr.html" class="signup-button">Sign Up</a>
+  </form>
+</body>
+
+</html>

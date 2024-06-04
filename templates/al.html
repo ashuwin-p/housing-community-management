@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Login</title>
+  <link rel="stylesheet" href="{{ url_for ('static', filename = 'al.css')}}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Open+Sans:wght@300&family=Roboto+Slab&family=Space+Grotesk:wght@500&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <h2>Admin Login</h2>
+  <form action="/admin/login" method="post">
+    <label for="userId">User ID:</label><br />
+    <input type="text" id="userId" name="userId" required /><br /><br />
+
+    <label for="password">Password:</label><br />
+    <input type="password" id="password" name="password" required /><br /><br />
+
+    <input type="submit" value="Login" />
+  </form>
+</body>
+
+</html>

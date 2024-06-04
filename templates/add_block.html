@@ -1,0 +1,76 @@
+{% extends "admin_panel.html" %}
+
+{% block content %}
+<style>
+    body {
+        font-family: Verdana, sans-serif;
+    }
+
+    h2 {
+        background-color: #088f8f;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        /* Center align the heading */
+    }
+
+    form {
+        width: 60%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin: 8px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #088F8F;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #066666;
+    }
+
+    /* Animation for border loop */
+    @keyframes borderLoop {
+        0% {
+            box-shadow: 0 0 0 0 rgba(8, 143, 143, 0.9);
+        }
+
+        100% {
+            box-shadow: 0 0 0 20px rgba(8, 143, 143, 0);
+        }
+    }
+
+    form:focus-within {
+        animation: borderLoop 1.5s infinite;
+        /* Apply animation */
+    }
+</style>
+
+<h2>Add Block</h2>
+<form action="/add_block.html" method="post">
+    <label for="block">Enter Block:</label><br>
+    <input type="text" id="block" name="block" pattern="[A-Za-z]+" title="Please enter alphabets only" required><br><br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

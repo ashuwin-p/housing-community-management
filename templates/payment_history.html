@@ -1,0 +1,64 @@
+{% extends "occupant_panel.html" %}
+
+{% block content %}
+<style>
+    /* CSS for styling the Payment History page */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #f4f4f4;
+    }
+
+    h2 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        padding: 0;
+        display: table; /* Display the UL as a table */
+        width: 60%; /* Adjust table width to 60% */
+        margin: 0 auto; /* Center align the table */
+    }
+
+    li {
+        display: table-row; /* Display the LI as a table row */
+        background-color: #fff;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    li:hover {
+        background-color: #f9f9f9;
+    }
+
+    li > span {
+        display: table-cell; /* Display the content as table cells */
+        padding: 10px;
+        border-bottom: 1px solid #ddd; /* Add bottom border for table-like effect */
+    }
+
+    /* Style the date and amount cells */
+    li > span:first-child {
+        width: 30%; /* Adjust width for date column */
+        font-weight: bold;
+    }
+
+    li > span:last-child {
+        width: 70%; /* Adjust width for amount column */
+        text-align: right;
+    }
+</style>
+<h2>Payment History</h2>
+<ul>
+    {% for payment in payment_history %}
+    <li>
+        <span>{{ payment.date }}</span>
+        <span>Amount: {{ payment.amount }}</span>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

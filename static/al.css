@@ -1,0 +1,83 @@
+/* al.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    background-color: #FFCE32;
+    margin: 40px;
+  }
+  
+  /* Form Styles */
+  h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    width: 400px;
+    margin: 0 auto;
+    background: #1D63FF;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    color: white;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    background-color: #b5b5b5;
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    width: calc(100% - 12px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #919090;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #ff4f9e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #da005e;
+  }
+  
+  .signup-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-decoration: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signup-button:hover {
+    background-color: #45a049;
+  }

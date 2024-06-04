@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+  <style>
+    /* CSS Styles */
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      font-size: 18px;
+      font-family: 'Play', sans-serif;
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    nav {
+      font-family: 'Acme', sans-serif;
+      font-size: 20px;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px 16px;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: #333;
+    }
+
+    section {
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Admin Panel</h1>
+  </header>
+  <nav>
+    <a href="/occu.html">View Occupied Flats</a>
+    <a href="/unoccu.html">View Unoccupied Flats</a>
+    <a href="/add_block.html">Add Block</a>
+    <a href="/add_flat.html">Add Flat</a>
+    <a href="/payments">View Accounts</a>
+    <a href="/">Logout</a>
+  </nav>
+  <section>
+    {% block content %}{% endblock %}
+  </section>
+</body>
+
+</html>

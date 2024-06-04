@@ -1,0 +1,73 @@
+{% extends "occupant_panel.html" %}
+
+{% block content %}
+<style>
+    /* CSS for styling the payment section */
+    .payment-section {
+        text-align: center;
+        margin-top: 50px;
+        font-size: 24px;
+        /* Adjust the font size as needed */
+    }
+
+    .amount-to-pay {
+        font-size: 40px;
+        /* Larger font size for the amount */
+        color: #B87333;
+        /* Color for the amount */
+        font-weight: bold;
+    }
+
+    .pay-button {
+        display: inline-block;
+        padding: 12px 24px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        border-radius: 6px;
+        background-color: #007bff;
+        /* Change the background color as desired */
+        color: #fff;
+        /* Text color for the button */
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        /* Smooth transition for hover effect */
+        animation-name: pulse;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+
+    .pay-button:hover {
+        background-color: #0056b3;
+        /* Change the background color on hover */
+    }
+
+    /* Keyframes for the pulse animation */
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+</style>
+
+<div class="payment-section">
+    <h2>Amount to Pay</h2>
+    <p class="amount-to-pay">&#8377; {{ amount_to_pay }}</p> <!-- Rupee symbol and amount -->
+    <form action="{{ url_for('make_payment') }}" method="POST">
+        <input type="submit" value="Pay Now" class="pay-button"> <!-- Pay Now button -->
+    </form>
+</div>
+{% endblock %}

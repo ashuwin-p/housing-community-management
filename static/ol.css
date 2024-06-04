@@ -1,0 +1,84 @@
+/* ol.css */
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  background-color: #1d1842;
+  margin: 20px;
+}
+
+/* Form Styles */
+h2 {
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 400px;
+  margin: 0 auto;
+  background: #fda1a2;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #8e0d3c;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #5f0023;
+}
+
+.signup-button {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 20px;
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: #0f0045;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #45a049;
+}

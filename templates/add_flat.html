@@ -1,0 +1,94 @@
+{% extends "admin_panel.html" %}
+
+{% block content %}
+<style>
+    h2 {
+        background-color: #088f8f;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        /* Center align the heading */
+    }
+
+    form {
+        margin: 20px auto;
+        /* Center the form horizontally */
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        /* Center align the form content */
+        position: relative;
+        /* Set position for animation */
+    }
+
+    label {
+        font-weight: bold;
+        display: block;
+        /* Ensure labels are on separate lines */
+        margin-bottom: 8px;
+    }
+
+    select,
+    input[type="text"] {
+        width: 200px;
+        padding: 8px;
+        margin-bottom: 15px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #088f8f;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #066666;
+    }
+
+    /* Animation for border loop */
+    @keyframes borderLoop {
+        0% {
+            box-shadow: 0 0 0 0 rgba(8, 143, 143, 0.9);
+        }
+
+        100% {
+            box-shadow: 0 0 0 20px rgba(8, 143, 143, 0);
+        }
+    }
+
+    form:focus-within {
+        animation: borderLoop 1.5s infinite;
+        /* Apply animation */
+    }
+</style>
+
+<h2>Add Flat</h2>
+<form action="/add_flat.html" method="post">
+    <label for="block">Block:</label>
+    <select id="block" name="block">
+        {% for block in blocks %}
+        <option value="{{ block }}">{{ block }}</option>
+        {% endfor %}
+    </select><br><br>
+
+    <label for="flat_no">Flat Number:</label>
+    <input type="text" id="flat_no" name="flat_no" required><br><br>
+
+    <label for="bhk">BHK:</label>
+    <select id="bhk" name="bhk">
+        <option value="1">1 BHK</option>
+        <option value="2">2 BHK</option>
+        <option value="3">3 BHK</option>
+    </select><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
